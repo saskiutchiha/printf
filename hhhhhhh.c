@@ -7,6 +7,5 @@ for (i=0;i<a;i++)
 {
 _putchar(*(format+i));
 }
-_putchar('\n');
 return (a);
 }
