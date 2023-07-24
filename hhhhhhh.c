@@ -6,6 +6,10 @@ int _printf(const char *format, ...)
 char *x,z;
 int i,j,a= strlen(format),b,c=0;
 va_list args;
+if (format == NULL)
+{
+  return NULL;
+}
 va_start(args,format);
 for (i=0;i<a;i++)
 {
