@@ -33,6 +33,12 @@ for (j=0; j <b;j++)
   }
   i++;
 }
+else if (*(format+i) == '%' && *(format+i+1) == '%')
+{
+  _putchar('%');
+  i++;
+  c++;
+}
 else
 {
 _putchar(*(format+i));
