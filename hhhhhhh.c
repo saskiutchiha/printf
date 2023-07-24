@@ -9,10 +9,7 @@ int i,j,a= strlen(format),b,c=0;
 va_list args;
 
 va_start(args,format);
-if (format == NULL)
-{
-  return NULL;
-}
+
 for (i=0;i<a;i++)
 {
 if(*(format+i) == '%' && *(format+i+1) == 'c')
