@@ -5,7 +5,7 @@
 int _printf(const char *format, ...)
 {
 char *x,z;
-int i,j,a= strlen(format),b,c=0;
+int i,j,a= strlen(format),b,c=0,r,y,new_y=0;
 va_list args;
 
 va_start(args,format);
@@ -38,6 +38,31 @@ else if (*(format+i) == '%' && *(format+i+1) == '%')
   _putchar('%');
   i++;
   c++;
+}
+else if (*(format+i) == '%' && *(format+i+1) == 'd')
+{
+  y = va_arg(args,int);
+  if (y < 0)
+  {
+    y = -y;
+    _putchar('-');
+    c++;
+  }
+  for (j=0;y!= 0;j++)
+    {
+      r = y%10;
+      y = y/10;
+     
+      new_y = new_y*10 + r;
+    }
+  for (j=0;new_y!= 0;j++)
+    {
+      r = new_y%10;
+      new_y = new_y/10;
+      _putchar(r+48);
+      c++;
+    }
+  i++;
 }
 else
 {
