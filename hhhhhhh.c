@@ -39,7 +39,7 @@ else if (*(format+i) == '%' && *(format+i+1) == '%')
   i++;
   c++;
 }
-else if (*(format+i) == '%' && *(format+i+1) == 'd')
+else if (*(format+i) == '%' && (*(format+i+1) == 'd' || *(format+i+1) == 'i'))
 {
   y = va_arg(args,int);
   if (y < 0)
