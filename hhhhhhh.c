@@ -78,7 +78,7 @@ else if (*(format+i) == '%' && (*(format+i+1) == 'd' || *(format+i+1) == 'i'))
     for (j=0; binary_y!= 0;j++)
       {
          r = binary_y%10;
-         binary_y = binary_y/2;
+         binary_y = binary_y/10;
         _putchar(r+48);
         c++;
       }
