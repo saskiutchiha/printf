@@ -151,7 +151,34 @@ for(;j>=0;j--)
   else if (*(format + i) == '%' && *(format + i + 1) == 'o')
 {
 y = va_arg(args, unsigned int);
-printf("%o",y);
+for (j = 0; y != 0; j++)
+{
+r = y % 8;
+if (r != 1)
+{
+n = 1;
+}
+if (n == 0)
+{
+numzero++;
+}
+y = y / 8;
+octale_y =  octale_y * 10 + r;     
+}
+for (j = 0; octale_y != 0; j++)
+{
+r = octale_y % 10;
+octale_y = octale_y / 10;
+_putchar(r + 48);
+c++;
+}
+for (j = 0;j < numzero; j++)
+{
+_putchar('0');
+c++;
+}
+i++;
+n=0;
 }
 else
 {
