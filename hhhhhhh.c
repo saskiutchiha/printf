@@ -9,7 +9,7 @@
  */
 int _printf(const char *format, ...)
 {
-char *x, z;
+char *x, z,bse_sexteen[10];
 int i, j, a = strlen(format), b, c = 0, r, y, new_y = 0, binary_y = 0, n = 0, numzero = 0;
 va_list args;
 va_start(args,format);
@@ -97,6 +97,30 @@ _putchar('0');
 c++;
 }
 i++;
+}
+else if (*(format + i) == '%' && *(format + i + 1) == 'X')
+{
+  y = va_arg(args,int);
+for (j = 0; y != 0; j++)
+{
+r = y % 16;
+y = y /16;
+if (r<10)
+{
+base_sexteen[j]=r +48;
+}
+else
+{
+base_sexteen[j]=r + 55;
+}
+}
+j--;
+for(;j>=0;j--)
+  {
+    _putchar(base_sexteen[j]);
+    c++;
+  }
+  i++;
 }
 else
 {
