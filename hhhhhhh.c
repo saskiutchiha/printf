@@ -67,7 +67,7 @@ else if (*(format+i) == '%' && (*(format+i+1) == 'd' || *(format+i+1) == 'i'))
   else if (*(format+i) == '%' && *(format+i+1) == 'b' )
   {
     y = va_arg(args,int);
-    n=1;
+
     for (j=0; y!= 0;j++)
       {
         r = y%2;
