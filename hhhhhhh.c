@@ -98,7 +98,7 @@ c++;
 }
 i++;
 }
-else if (*(format + i) == '%' && *(format + i + 1) == 'X')
+else if (*(format + i) == '%' && *(format + i + 1) == 'x')
 {
   y = va_arg(args,int);
 for (j = 0; y != 0; j++)
