@@ -98,6 +98,7 @@ c++;
 }
 i++;
 }
+
 else if (*(format + i) == '%' && *(format + i + 1) == 'x')
 {
   y = va_arg(args,int);
