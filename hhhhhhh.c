@@ -2,7 +2,6 @@
 #include "main.h"
 #include <stdarg.h>
 #include <stddef.h>
-#include <stdio.h>
 /**
  * _printf- Entry point
  *@format : variable to pass to _printf function
