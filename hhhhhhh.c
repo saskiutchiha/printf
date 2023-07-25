@@ -5,7 +5,7 @@
 int _printf(const char *format, ...)
 {
 char *x,z;
-int i,j,a= strlen(format),b,c=0,r,y,new_y=0;
+int i,j,a= strlen(format),b,c=0,r,y,new_y=0,binary_y=0,n;
 va_list args;
 
 va_start(args,format);
@@ -64,6 +64,26 @@ else if (*(format+i) == '%' && (*(format+i+1) == 'd' || *(format+i+1) == 'i'))
     }
   i++;
 }
+  else if (*(format+i) == '%' && *(format+i+1) == 'b' )
+  {
+    y = av_arg(args,insigned int);
+    n=1;
+    for (j=0; y!= 0;j++)
+      {
+        r = y%2;
+        y = y/2;
+        binary_y = r*n + binary_y;
+        n=n*10;
+      }
+    for (j=0; binary_y!= 0;j++)
+      {
+         r = binary_y%10;
+         binary_y = binary_y/2;
+        _putchar(r+48);
+        c++;
+      }
+    i++
+  }
 else
 {
 _putchar(*(format+i));
