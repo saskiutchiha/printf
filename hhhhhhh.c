@@ -3,8 +3,8 @@
 #include <stdarg.h>
 #include <stddef.h>
 /**
- *   _printf- Entry point
- *@format : variable to pass to   _printf function
+ * _printf- Entry point
+ *@format : variable to pass to _printf function
  * Return: integer (Success)
  */
 int _printf(const char *format, ...)
