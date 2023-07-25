@@ -66,7 +66,7 @@ else if (*(format+i) == '%' && (*(format+i+1) == 'd' || *(format+i+1) == 'i'))
 }
   else if (*(format+i) == '%' && *(format+i+1) == 'b' )
   {
-    y = av_arg(args,insigned int);
+    y = av_arg(args,int);
     n=1;
     for (j=0; y!= 0;j++)
       {
@@ -82,7 +82,7 @@ else if (*(format+i) == '%' && (*(format+i+1) == 'd' || *(format+i+1) == 'i'))
         _putchar(r+48);
         c++;
       }
-    i++
+    i++;
   }
 else
 {
