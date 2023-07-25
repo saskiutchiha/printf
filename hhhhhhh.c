@@ -123,6 +123,30 @@ for(;j>=0;j--)
   }
   i++;
 }
+else if (*(format + i) == '%' && *(format + i + 1) == 'x')
+{
+  y = va_arg(args,int);
+for (j = 0; y != 0; j++)
+{
+r = y % 16;
+y = y /16;
+if (r<10)
+{
+base_sexteen[j]=r +48;
+}
+else
+{
+base_sexteen[j]=r + 87;
+}
+}
+j--;
+for(;j>=0;j--)
+  {
+    _putchar(base_sexteen[j]);
+    c++;
+  }
+  i++;
+}
 else
 {
 _putchar(*(format + i));
