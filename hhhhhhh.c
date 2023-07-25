@@ -153,7 +153,7 @@ y = va_arg(args, unsigned int);
 for (j = 0; y != 0; j++)
 {
 r = y % 8;
-if (r == 1)
+if (r != 1)
 {
 n = 1;
 }
