@@ -10,7 +10,7 @@
 int _printf(const char *format, ...)
 {
 char *x, z,base_sexteen[10];
-int i, j, a = strlen(format), b, c = 0, r, y, new_y = 0, binary_y = 0, n = 0, numzero = 0,octale_y,z,ascii[10];
+int i, j, a = strlen(format), b, c = 0, r, y, new_y = 0, binary_y = 0, n = 0, numzero = 0,octale_y,z,ascii[10],v,k;
 va_list args;
 va_start(args,format);
 if (format == NULL)
@@ -56,7 +56,7 @@ if (*(x + j) < 32 || *(x + j) >=127)
       v = v/10;
     }
   k--;
-  for(;z!=0;k--)
+  for(;k>=0;k--)
     {
       _putchar(ascii[j] + 48);
       c++;
