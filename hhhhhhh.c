@@ -47,6 +47,7 @@ if (*(x + j) < 32 || *(x + j) >=127)
 {
   _putchar(92);
   _putchar(120);
+  _putchar('0');
   c++;
   y = *(x + j);
 for (k = 0; y != 0; k++)
